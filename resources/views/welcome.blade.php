@@ -1,5 +1,9 @@
 @extends("layout.app")
 @section("body")
+
+@include("layout.success")
+@include("layout.error")
+
 {{-- main home --}}
 @include("components.homeItem")
 
