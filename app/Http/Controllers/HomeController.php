@@ -15,6 +15,6 @@ class HomeController extends Controller
         $languages = Language::all();
         $admin = User::where('role', 'admin')->first();
 
-        return view("welcome", compact("projects", "admin"));
+        return view("welcome", compact("projects","languages", "admin"));
     }
 }

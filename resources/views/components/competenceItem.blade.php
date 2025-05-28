@@ -15,35 +15,37 @@
         <div class="w-full flex flex-col items-center gap-8 lg:flex-row justify-around lg:items-start">
           <ul class="w-full sm:w-[80%] ">
           <h2 class="text-center text-sm font-semibold">FRONT END</h2>
-            {{-- {frontSkills.map((skill) => (
-              <li class="w-[50%] mx-auto pb-4" key={skill.tech}>
-                <p class="flex justify-between w-full text-xs font-light">
-                  <span> {skill.tech} </span> {skill.level}
-                </p>
-                <div class="w-full bg-slate-100 h-2 !rounded-md">
-                  <div
-                    class={`!bg-blue-700 h-full`}
-                    style={{ width: `${skill.level}` }}
-                  ></div>
-                </div>
-              </li>
-            ))} --}}
+          @foreach ($languages as $language )
+            @if($language->part == "Front-end")
+                <li class="w-[50%] mx-auto py-1">
+
+                    <div class="w-full bg-slate-950 h-[50px] !rounded-lg flex justify-between items-center px-3 cursor-pointer hover:bg-slate-900 transition duration-700 ease-in-out">
+                        <h3 class="text-blue-500 font-semibold">{{ $language->name }}</h3>
+                        <div class="w-[40px] h-[40px] ">
+                            <img src="{{ asset('storage/' . $language->icon) }}" alt="Icon" class="rounded-4xl w-full h-full object-contain" />
+                        </div>
+
+                    </div>
+                </li>
+            @endif
+          @endforeach
+
           </ul>
           <ul class="w-full sm:w-[80%] ">
           <h2 class="text-center text-sm font-semibold">BACK END</h2>
-            {{-- {backSkills.map((skill) => (
-              <li class="w-[50%] mx-auto pb-4" key={skill.tech}>
-                <p class="flex justify-between w-full text-xs font-light">
-                  <span> {skill.tech} </span> {skill.level}
-                </p>
-                <div class="w-full bg-slate-100 h-2 !rounded-md">
-                  <div
-                    class={`!bg-blue-700 h-full`}
-                    style={{ width: `${skill.level}` }}
-                  ></div>
-                </div>
+          @foreach ($languages as $language )
+          @if($language->part == "Back-end")
+              <li class="w-[50%] mx-auto py-1">
+
+                  <div class="w-full bg-slate-950 h-[50px] !rounded-lg flex justify-between items-center px-3 cursor-pointer hover:bg-slate-900 transition duration-700 ease-in-out">
+                    <h3 class="text-blue-500 font-semibold">{{ $language->name }}</h3>
+                    <div class="w-[40px] h-[40px] ">
+                        <img src="{{ asset('storage/' . $language->icon) }}" alt="Icon" class="rounded-4xl w-full h-full object-contain" />
+                    </div>
+                  </div>
               </li>
-            ))} --}}
+          @endif
+        @endforeach
           </ul>
         </div>
       </div>

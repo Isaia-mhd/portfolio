@@ -21,7 +21,7 @@
                     </div>
                     <div class="w-full h-[20%] pt-3">
                     <div class="w-full flex justify-between items-center">
-                        <h1 class="text-xl text-blue-700 font-semibold"><a class="hover:underline" href="{{ asset("storage/" . $project->url) }}" target="_blank" style="{{ !$project->active ? 'pointer-events: none; opacity: 0.5;' : '' }}">{{ $project->name }}</a></h1>
+                        <h1 class="text-xl text-blue-700 font-semibold"><a class="hover:underline" href="{{ $project->url }}" target="_blank" style="{{ !$project->active ? 'pointer-events: none; opacity: 0.5;' : '' }}">{{ $project->name }}</a></h1>
                         <p class="text-xs text-blue-700 font-bold">{{ $project->tech }}</p>
                     </div>
                     <p class="text-sm font-light text-slate-200 pt-3"> {{ $project->description }} </p>

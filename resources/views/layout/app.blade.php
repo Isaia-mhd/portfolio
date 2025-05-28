@@ -13,7 +13,7 @@
         <div class="w-full h-[100%] bg-slate-900 max-w-[400px] mx-auto md:max-w-[80%] rounded-full px-6">
           <ul class=" w-full h-full flex justify-between items-center gap-9">
             <div class="w-6 h-6">
-              <a href="/">
+              <a href="/admin">
                 <Image
                   src="/icon/icon.png"
                   alt="Icon"
@@ -64,25 +64,47 @@
       @yield("body")
 
       {{-- FOOTER --}}
-      <footer>
-        <div class="w-full max-w-[400px] md:max-w-[80%] mx-auto py-4 flex flex-col justify-center items-center">
-            <div class="w-full">
-                <h1 class="text-2xl text-purple-700 font-semibold">Link</h1>
-                <ul class="text-sm space-y-3">
+      <footer class="bg-slate-950 text-white py-10">
+        <div class="max-w-7xl mx-auto px-6 sm:px-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                    <li class="">Phone: +261 32 90 707 29 / +261 38 15 956 69</li>
-                    <li class="">E-mail: <a class="text-blue-500 underline" href="mailto:mohamedesaie21@gmail.com" target="_blank">mohamedesaie21@gmail.com</a></li>
-                    <li class="">Whatsapp: <a class="text-blue-500 underline" href="https://wa.me/261329070729" target="_blank">+261 32 90 707 29</a></li>
-                    <li class="">Git hub: <a class="text-blue-500 underline" href="https://github.com/Isaia-mhd" target="_blank">Isaia-mhd</a></li>
-                    <li class="">Facebook: <a class="text-blue-500 underline" href="https://web.facebook.com/profile.php?id=100081652459212" target="_blank">MUHHAMED RZ</a></li>
 
-                </ul>
+          <div class="flex flex-col space-y-4">
+            <h2 class="text-3xl font-bold text-purple-500">Isaia Mohamed</h2>
+            <p class="text-gray-400 text-sm">
+              Passionate junior web developer based in Madagascar. Always learning, always building.
+            </p>
+          </div>
 
-            </div>
 
-            <p class="text-sm text-gray-600">copyright <span>&copy;</span> {new Date().getFullYear()} - Isaia Mohamed </p>
+          <div>
+            <h3 class="text-xl font-semibold text-purple-400 mb-4">Contact</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li><strong>Phone:</strong> +261 32 90 707 29 / +261 38 15 956 69</li>
+              <li><strong>Email:</strong> <a href="mailto:{{ $admin->email }}" class="text-blue-400 hover:underline">mohamedesaie21@gmail.com</a></li>
+              <li><strong>WhatsApp:</strong> <a href="https://wa.me/261329070729" target="_blank" class="text-blue-400 hover:underline">+261 32 90 707 29</a></li>
+            </ul>
+          </div>
+
+
+          <div>
+            <h3 class="text-xl font-semibold text-purple-400 mb-4">Social Media</h3>
+            <ul class="space-y-2 text-sm text-gray-300">
+              <li><a href="https://github.com/Isaia-mhd" target="_blank" class="hover:text-white hover:underline">GitHub: Isaia-mhd</a></li>
+              <li><a href="https://web.facebook.com/profile.php?id=100081652459212" target="_blank" class="hover:text-white hover:underline">Facebook: MUHHAMED RZ</a></li>
+            </ul>
+          </div>
         </div>
+
+
+        <div class="mt-10 border-t border-gray-700 pt-6 text-center text-sm text-gray-400">
+          &copy; <span id="year"></span> {{ $admin->fullName }}. All rights reserved.
+        </div>
+
+        <script>
+          document.getElementById("year").textContent = new Date().getFullYear();
+        </script>
       </footer>
+
 
 </body>
 </html>
