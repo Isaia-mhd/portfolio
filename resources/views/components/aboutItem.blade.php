@@ -19,7 +19,7 @@
         &lt;&gt;Introduction&lt;/&gt;
       </p>
         <p class="text-slate-300 text-sm">
-            Hello, I'm Andoniaina Isaia Mohamed, a web developer. I'm {{ date("Y") - 2003 }} years old and a Computer Science student at ENI (École Nationale d'Informatique) in Fianarantsoa, Madagascar, where I have been studying since 2024.Before joining ENI, I completed a five-month web development training program at Gasy Tech in Antananarivo in 2023. This training provided me with foundational knowledge in web development, including HTML5, CSS3, JavaScript, and PHP. Now, specializing in Laravel and React.js, I focus on building scalable web applications with robust back-end systems and dynamic, user-friendly interfaces. Committed to clean code and impactful solutions, I deliver high-performance results that emphasize functionality and user experience.
+           {{ $admin->about }}
         </p>
 
         {{-- BOUTTON of Resume and CONTACT --}}
@@ -31,7 +31,7 @@
             Contact me
           </a>
           <a
-            href="/resume/Isaia_resume.pdf"
+            href="{{ asset("storage/" . $admin->resume) }}"
             download
             class="text-xs lg:text-md font-semibold py-4 px-2 lg:px-7 bg-none border-2 border-blue-500 !rounded-full text-md text-white hover:border-purple-900 transition duration-500 ease-in-out"
           >

@@ -1,10 +1,16 @@
 <div class="">
-    <div id="contact" class="w-full mt-2 mb-12 rounded-md max-w-[400px] md:max-w-[80%] mx-auto">
-      <form class="w-full max-w-[400px] mx-auto md:max-w-[50%] lg:max-w-[40%] md:mx-0 py-2 rounded-lg" action="{{ route("email.send") }}" method="POST">
+    <div id="contact" class="w-full mt-12 mb-12 rounded-md max-w-[400px] md:max-w-[80%] mx-auto">
+        <div class="flex flex-col justify-center items-center">
+            <p class="text-4xl font-bold text-purple-700">Contact me</p>
+            <p class="text-slate-400 text-sm font-bold">
+              &lt;&gt;Feel free to get in touch&lt;/&gt;
+            </p>
+          </div>
+      <form class="w-full lg:max-w-[40%] mx-auto py-2 rounded-lg" action="{{ route("email.send") }}" method="POST">
         @csrf
-        <div class="mb-4 text-white font-semibold">
-          <h1 class="text-4xl font-bold text-purple-700 pt-[60px]">Contact me</h1>
-        </div>
+        {{-- <div class="w-full bg-red-500 mb-4 text-white font-semibold">
+          <h1 class="text-4xl font-bold text-purple-700 pt-[60px] text-center">Contact me</h1>
+        </div> --}}
         <div class="flex flex-col gap-2 mb-6">
           <label htmlFor="name" class="text-white text-sm font-semibold">Name</label>
           <input
