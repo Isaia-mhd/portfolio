@@ -67,16 +67,10 @@
             </div>
         @enderror
         <div class="flex flex-col gap-2 mb-6">
-          <button type="submit" class="bg-blue-600 py-2 px-5 text-sm text-white rounded font-light w-[100px] cursor-pointer hover:bg-blue-700 transition duration-150 ease-in-out active:bg-blue-800">
+          <button type="submit" class="bg-blue-900 py-2 px-5 text-sm text-white rounded font-light w-[100px] cursor-pointer hover:bg-blue-700 transition duration-150 ease-in-out active:bg-blue-800">
             Send
           </button>
         </div>
       </form>
-      {{-- <p
-      className={
-          status === "Sending..." ? "text-white" :
-          status === "Email was sent successfully!" ? "text-green-500" :
-          "text-red-500"
-      }>{status}</p> --}}
     </div>
   </div>

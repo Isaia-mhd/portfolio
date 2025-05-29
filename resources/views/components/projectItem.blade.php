@@ -11,7 +11,7 @@
     @else
         <div class="w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 place-items-center px-4 rounded-lg">
             @foreach ($projects as $project)
-                <div class="border-2 w-full h-[400px] p-3 rounded-lg hover:-translate-y-2 transition duration-500 ease-in-out hover:cursor-pointer " key={project.name}>
+                <div class="border-2 border-blue-800 w-full h-[400px] p-3 rounded-lg hover:-translate-y-2 transition duration-500 ease-in-out hover:cursor-pointer ">
                     <div
                         class="w-full h-[70%] rounded-md"
                         style="background-image: url('{{ asset("storage/" . $project->imgUrl) }}');
